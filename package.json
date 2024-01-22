@@ -1,32 +1,20 @@
 {
-	"name": "create-turbosvelte",
-	"version": "1.5.5",
-	"author": "",
-	"description": "This is an unofficial SvelteKit monorepo starter powered by Turborepo.",
-	"bin": "./bin/cli.cjs",
-	"workspaces": [
-		"apps/*",
-		"packages/*"
-	],
-	"scripts": {
-		"build": "turbo run build",
-		"dev": "turbo run dev --parallel",
-		"lint": "turbo run lint"
-	},
-	"devDependencies": {
-		"turbo": "latest",
-		"prettier": "^2.4.1",
-		"prettier-plugin-svelte": "^2.4.0"
-	},
-	"keywords": [
-		"Svelte",
-		"Component Library",
-		"Turborepo"
-	],
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/Brisklemonade/turbosvelte.git"
-	},
-	"license": "MIT",
-	"type": "module"
+  "name": "turbosvelte",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "prettier": "^3.1.1",
+    "turbo": "latest"
+  },
+  "packageManager": "pnpm@8.9.0",
+  "engines": {
+    "node": ">=18"
+  }
 }
